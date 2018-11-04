@@ -44,7 +44,7 @@ a, .a {
   color: var(--link-color);
   text-decoration: none;
   position: relative;
-  border-bottom: 0.18rem solid transparent;
+  border-bottom: 0.05em solid;
   transition: border 0.15s;
 
     &:hover, &:focus {
