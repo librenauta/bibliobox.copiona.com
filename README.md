@@ -1,13 +1,13 @@
 # bibliobox.copiona.com
 
-Sitio  online https://biblioteca.copiona.com
+Sitio online https://biblioteca.copiona.com
 
 Repositorio del sitio Bibliobox.copiona.com
 
-#Para ejecutar descargar version de jekyll y bundle 
-ejecutar `install.sh`
+## Como usar
 
+para instalar dependencias `bash install.sh`
 
-para editar nuevamente  ejecutar `./bin/jekyll build` //para crear el sitio en _site
+para trabajar el sitio `./bin/jekyll serve` (se actualiza cada vez que cambias algo)
 
-servidor local para ver el sitio `./bin/jekyll serve` //para ejecutar
+para "compilar" el sitio `./bin/jekyll build` (se compila a `_site`)
