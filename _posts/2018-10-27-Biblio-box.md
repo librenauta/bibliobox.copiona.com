@@ -41,7 +41,7 @@ Si bien el software puede utilizarce en varios dispositivos, esta instancia de b
 ---------------------------------------------------------------------
 1. Instalar [[Calibre]](https://calibre-ebook.com) este será el lugar donde volcaremos los libros y los organizarémos por etiquetas, autoras, series.
 2. Volcar libros en una biblioteca.
-3. Editar metadata de los libros y asegurarnos que tienen todos portadas [tapas], en el buscador de calibre podemos poner `cover:false` para filtrar los libros que no tengan una tapa, y podemos crearle una en `Modificar metadatos > Generar portada`
+3. Editar metadata de los libros y asegurarnos que tienen todos portadas [tapas], en el buscador de calibre podemos poner: `cover:false` para filtrar los libros que no tengan una tapa, y podemos crearle una en `Modificar metadatos > Generar portada`
 
 4. Clonar el repositorio de [[biblioteca-guerrilla]](https://github.com/elKaZe/biblioteca-guerrilla) `git clone https://github.com/elKaZe/biblioteca-guerrilla.git `
 >Biblioteca-guerrilla es un script escrito en python que utiliza la base de datos de calibre y los libros de la biblioteca para crear un sitio estático. para ejecutar el script que esta en ./biblioteca-guerrilla/app/freeze.py son necesarias algunas herramientas:
@@ -59,21 +59,21 @@ CONECTOR_OPCIONES = {
 RUTA_BASE_LIBROS = "ruta/a/la/bibliotecaDeCalibre/"
 FREEZER_DESTINATION = "/tmp/biblioteca-guerrilla/"
 ~~~
-[1]. Aquí cree el directorio `mkdir miaubox` y clone el repositorio allí dentro.
+[1] Aquí cree el directorio `mkdir miaubox` y clone el repositorio allí dentro.
 ![683x741](https://bibliobox.copiona.com/assets/img/02.png "Large example image")
-[2]. Editando con nano el archivo settings.py
+[2] Editando con nano el archivo settings.py
 ![683x741](https://bibliobox.copiona.com/assets/img/02.png "Large example image")
-[3]. Ejecutando pipenv shell
+[3] Ejecutando pipenv shell
 ![683x741](https://bibliobox.copiona.com/assets/img/03.png "Large example image")
-[4]. Luego de editar y guardar settings.py podemos crear el sitio estático con `make generate-static-website` si no tenes `make` podes hacer `apt/pacman/dnf install make dependiendo de tu dsitribución Gnu/linux`
+[4] Luego de editar y guardar settings.py podemos crear el sitio estático con `make generate-static-website` si no tenes `make` podes hacer `apt/pacman/dnf install make dependiendo de tu dsitribución Gnu/linux`
 
 Ejecutando make generate-static-website
 ![683x741](https://bibliobox.copiona.com/assets/img/04.png "Large example image")
-[5]. Para ejecutar un servidor de pruebas ejecutamos `make start-test-server` y podemos acceder a el vía `http://localhost:5000/`
+[5] Para ejecutar un servidor de pruebas ejecutamos `make start-test-server` y podemos acceder a el vía `http://localhost:5000/`
 
 ![683x741](https://bibliobox.copiona.com/assets/img/05.png "Large example image")
 
-[6]. Con esto tenemos el sitio en /tmp/biblioteca-guerrilla/ ahora lo siguiente es preparar el equipo donde se alojará el sitio estático!
+[6] Con esto tenemos el sitio en /tmp/biblioteca-guerrilla/ ahora lo siguiente es preparar el equipo donde se alojará el sitio estático!
 ![683x741](https://bibliobox.copiona.com/assets/img/06.png "Large example image")
 * Luego de agregar varios libros podemos realizar nuevamente el paso 5 y copiar la nueva web actualizada de /tmp/biblioteca-guerrilla.
 ![683x741](https://bibliobox.copiona.com/assets/img/07.png "Large example image")
@@ -166,7 +166,7 @@ sudo mv -r /home/pi/biblioteca-guerrilla /var/www/html
 
 # ¡A por islas de bibliotecas portátiles!
 ![una bibliobox feliz :)](assets/img/09.jpg)
-aa
+
 # Fuentes
 1. [Setting up a Raspberry Pi as an access point in a standalone network (NAT)](https://www.raspberrypi.org/documentation/configuration/wireless/access-point.md)
 2. [Install Nginx Raspbian, and accelerate your Raspberry web server](https://howtoraspberrypi.com/install-nginx-raspbian-and-accelerate-your-raspberry-web-server/)
