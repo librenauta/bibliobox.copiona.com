@@ -44,8 +44,9 @@ a, .a {
   color: var(--link-color);
   text-decoration: none;
   position: relative;
-  border-bottom: 0.18rem solid transparent;
-  transition: border 0.15s;
+  border-bottom: 0.05em solid;
+  // border-bottom: 0.18rem solid;
+  transition: border-bottom 0.15s;
 
     &:hover, &:focus {
       text-decoration: none;
