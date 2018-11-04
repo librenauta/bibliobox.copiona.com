@@ -15,16 +15,16 @@ published: true
 ---
 
 
-¿Querés tener una biblioteca portátil para compartir libros? en la siguiente entrada se detalla como crear una bibliobox usando el código de <a href="https://github.com/elKaZe/biblioteca-guerrilla">biblioteca-guerrilla</a> una raspberry pi y una celda de carga.
+¿Querés tener una biblioteca portátil para compartir libros? en la siguiente entrada se detalla como crear una bibliobox usando el código de [biblioteca-guerrilla](https://github.com/elKaZe/biblioteca-guerrilla) una raspberry pi y una celda de carga.
 {: .lead}
-> Una bibliobox es un dispositivo que crea una red <a href="https://en.wikipedia.org/wiki/Wireless_LAN">wLAN</a> para poder conectarte y navegar un sitio estático que contiene una biblioteca digital.
+> Una bibliobox es un dispositivo que crea una red [WLAN](https://en.wikipedia.org/wiki/Wireless_LAN) para poder conectarte y navegar un sitio estático que contiene una biblioteca digital.
 
 Si bien el software puede utilizarce en varios dispositivos, esta instancia de biblioteca guerrilla será  montada en una raspberry pi.
  En esta documentación se detallará ese procedimimiento
 *al estilo receta de cocina: ¿Qué necesitamos?
 
-* <a href="https://www.raspberrypi.org/products/raspberry-pi-3-model-b/">Raspberry pi 3 model B</a> [con placa de wifi integrada]
-* Monitor con hdmi para instalar <a href="https://www.raspberrypi.org/downloads/raspbian/">Rasbian</a>  a la raspberry pi 3
+* [Raspberry PI 3 model B](https://www.raspberrypi.org/products/raspberry-pi-3-model-b/) [con placa de WiFi integrada]
+* Monitor con hdmi para instalar [Rasbian](https://www.raspberrypi.org/downloads/raspbian)  a la Raspberry PI 3
 * Tarjeta de memoria + 8gb (para OS y Libros)
 * Computadora con Gnu/linux[^1] instalado.
 * Calibre instalado  con una biblioteca y libros.
@@ -37,22 +37,22 @@ Si bien el software puede utilizarce en varios dispositivos, esta instancia de b
 
 
 
-#1  Equipo que generará el sitio estático con la biblioteca.
+#1 Equipo que generará el sitio estático con la biblioteca.
 ---------------------------------------------------------------------
-1. Instalar <a href="https://calibre-ebook.com/">[Calibre]</a> este será el lugar donde volcaremos los libros y los organizarémos por etiquetas, autoras, series.
+1. Instalar [[Calibre]](https://calibre-ebook.com) este será el lugar donde volcaremos los libros y los organizarémos por etiquetas, autoras, series.
 2. Volcar libros en una biblioteca.
 3. Editar metadata de los libros y asegurarnos que tienen todos portadas [tapas], en el buscador de calibre podemos poner `cover:false` para filtrar los libros que no tengan una tapa, y podemos crearle una en `Modificar metadatos > Generar portada`
 
-4. Clonar el repositorio de <a href="https://github.com/elKaZe/biblioteca-guerrilla">[biblioteca-guerrilla]</a> `git clone https://github.com/elKaZe/biblioteca-guerrilla.git `
+4. Clonar el repositorio de [[biblioteca-guerrilla]](https://github.com/elKaZe/biblioteca-guerrilla) `git clone https://github.com/elKaZe/biblioteca-guerrilla.git `
 >Biblioteca-guerrilla es un script escrito en python que utiliza la base de datos de calibre y los libros de la biblioteca para crear un sitio estático. para ejecutar el script que esta en ./biblioteca-guerrilla/app/freeze.py son necesarias algunas herramientas:
 
 
-* Instalar <a href="https://tutorial.djangogirls.org/es/python_installation/">[python]</a>
+* Instalar [[Python]](https://tutorial.djangogirls.org/es/python_installation/)
 * Instalar pipenv `pip install pipenv --user`
 * Instalar las dependencias parado en ./biblioteca-guerrilla `pipenv install` [1]
 * Luego iniciar el entorno de trabajo para poder generar la biblioteca `pipenv shell`
 * Ahora que tenemos el entorno de trabajo con las dependencias vamos a editar el archivo ./biblioteca-guerrilla/app/settings.py y reemplazar la ruta donde esta nuestra biblioteca calibre y su archivo metadata.db en FREEZER_DESTINATION podemos editar la ruta donde guardará el sitio estático con la página.  
-~~~js
+~~~python
 CONECTOR_OPCIONES = {
     "ruta": "ruta/a/la/bibliotecaDeCalibre/metadata.db"
     }
@@ -81,13 +81,13 @@ Ejecutando make generate-static-website
 #2  Equipo que alojará la biblioteca.
 -----------------------------------------
 -Estos pasos recomiendo hacerlos con un monitor enchufado a la raspberrypi.
-1. Instalación de OS en raspberry pi 3, en este <a href="https://www.raspberrypi.org/downloads/raspbian/" >link</a> podrás descargar la imagen de raspbian, la distribución optimizada de debian para instalar en raspberry pi, luego de instalar `sudo apt-get update
+1. Instalación de OS en raspberry pi 3, en este [link](https://www.raspberrypi.org/downloads/raspbian) podrás descargar la imagen de raspbian, la distribución optimizada de debian para instalar en raspberry pi, luego de instalar `sudo apt-get update
 sudo apt-get upgrade`
 2. Cambio de contraseña de usuaria pi (por defecto). Con `sudo passwd` cambiamos la contraseña por defecto e introducimos 2 veces la nueva.
-3. Instalación de nginx como servidor Web <a href="https://howtoraspberrypi.com/install-nginx-raspbian-and-accelerate-your-raspberry-web-server/"> Acá</a> hay una guía muy completa de como instalarlo y dejar el servicio funcionando (dejar el servicio significa que nginx el servidor web que instalaremos se iniciará cuando la raspberrypi inicie)
+3. Instalación de nginx como servidor Web [Acá](https://howtoraspberrypi.com/install-nginx-raspbian-and-accelerate-your-raspberry-web-server/) hay una guía muy completa de como instalarlo y dejar el servicio funcionando (dejar el servicio significa que nginx el servidor web que instalaremos se iniciará cuando la raspberrypi inicie)
 4. Como raspbian viene con apache vamos a pararlo con:
  `sudo /etc/init.d/apache2 stop`
-Luego le decimos con <a href="https://wiki.archlinux.org/index.php/systemd_(Espa%C3%B1ol)">systemd</a> que no este enabled como servicio:
+Luego le decimos con [`systemd`](https://wiki.archlinux.org/index.php/systemd_(Espa%C3%B1ol)) que no este enabled como servicio:
 `sudo systemctl disable apache2`
 5. Instalamos nginx y php-fpm
 `sudo apt install nginx php-fpm`
@@ -103,7 +103,7 @@ sudo systemctl stop hostapd`
 Para configurar la ip estática editamos el siguiente archivo:                           
  `sudo nano /etc/dhcpcd.conf` (nano es el editor de texto que viene por defecto en raspbian)
 alli podremos lo siguiente al final del archivo:
-~~~js
+~~~bash
 interface wlan0
     static ip_address=192.168.100.1/24
     nohook wpa_supplicant
@@ -120,7 +120,7 @@ static ip_address es la ip con la cual nos conectaremos via ssh luego
 `sudo nano /etc/hostapd/hostapd.conf` en este archivo pondremos el nombre de la red inalámbrica y si queremos que tenga contraseña o no.
 
 usar lo siguiente:
-~~~js
+~~~bash
 interface=wlan0
 driver=nl80211
 ssid=Biblio.box
@@ -142,22 +142,22 @@ rsn_pairwise=CCMP
 14. Ahora necesitamos que el sistema encuentre el archivo asi que en `sudo nano /etc/default/hostapd` buscamos #DAEMON_CONF y escribimos `DAEMON_CONF="/etc/hostapd/hostapd.conf"`
 
 15. Iniciamos los servicios dnsmasq & hostapd
-~~~js
+~~~bash
 sudo systemctl start hostapd
 sudo systemctl start dnsmasq
 ~~~
-16. Antes de reiniciar vamos a chequear  tener el puerto 22 (SSH) abierto para poder comunicarnos via Wireless.  lo más fácil es utilizar el comando `sudo raspi-config` > 5 Interfacing Options > P2 SSH > Sí.
+16. Antes de reiniciar vamos a chequear  tener el puerto 22 (SSH) abierto para poder comunicarnos via Wireless. Lo más fácil es utilizar el comando `sudo raspi-config` > 5 Interfacing Options > P2 SSH > Sí.
 
 17. Luego parado en la máquina [A] y conectada a la red biblio.box  ubicamos la ruta donde creamos la biblioteca-guerrilla y enviamos esa carpeta al home/pi/ de la raspberrypi con el comando `scp`.
 Escribimos -r para que copie los directorios y subdirectorios.
 * El comando scp copia y envía por ssh lo que indiquemos, primero hay que indicar el directorio a copiar y luego la conexión via ssh al equipo de destino, seguido de la ubicación de la carpeta destino.
-~~~js
+~~~bash
 scp -r /tmp/biblioteca-guerrilla/ pi@192.168.100.1:/home/pi/
 ~~~
-![683x741](https://bibliobox.copiona.com/assets/img/08.png "Large example image")
+![screenshot de una terminal copiando los archivos](assets/img/08.png)
 
 18. Luego en pi@192.168.100.1 dentro de /home/pi utilizamos el comando `mv` para mover los directorios del home a la carpeta host.
-~~~js
+~~~bash
 sudo mv -r /home/pi/biblioteca-guerrilla /var/www/html
 ~~~
 19. Por último nos conectamos a la red vía movil o con una computadora y tecleamos en el navegador `192.168.100.1` e ingresamos a la biblioteca portátil. si ingresamos desde un celular, es necesario que desactivemos los datos móviles, ya que al ingresar la ip, el navegador intentará hacer una petición fuera de la red wlan0.
@@ -165,9 +165,9 @@ sudo mv -r /home/pi/biblioteca-guerrilla /var/www/html
 20. Por último, podemos conectar directamente la celda de carga con la raspberry-pi-3 y montar la red en cualquier sitio, independientemente de si hay corriente electrica o internet.
 
 # ¡A por islas de bibliotecas portátiles!
-![683x741](https://bibliobox.copiona.com/assets/img/09.jpg "Large example image")
+![una bibliobox feliz :)](assets/img/09.jpg)
+aa
 # Fuentes
-1. <a href="https://www.raspberrypi.org/documentation/configuration/wireless/access-point.md">Setting up a Raspberry Pi as an access point in a standalone network (NAT) </a>
-
-2. <a href="https://howtoraspberrypi.com/install-nginx-raspbian-and-accelerate-your-raspberry-web-server/">Install Nginx Raspbian, and accelerate your Raspberry web server</a>
-3. <a href=" https://www.raspberrypi.org/forums/viewtopic.php?t=175143">SSH-Raspbian</a>
+1. [Setting up a Raspberry Pi as an access point in a standalone network (NAT)](https://www.raspberrypi.org/documentation/configuration/wireless/access-point.md)
+2. [Install Nginx Raspbian, and accelerate your Raspberry web server](https://howtoraspberrypi.com/install-nginx-raspbian-and-accelerate-your-raspberry-web-server/)
+3. [SSH-Raspbian](https://www.raspberrypi.org/forums/viewtopic.php?t=175143)
