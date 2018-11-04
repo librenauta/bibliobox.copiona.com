@@ -154,7 +154,7 @@ Escribimos -r para que copie los directorios y subdirectorios.
 ~~~bash
 scp -r /tmp/biblioteca-guerrilla/ pi@192.168.100.1:/home/pi/
 ~~~
-![screenshot de una terminal copiando los archivos](assets/img/08.png)
+![screenshot de una terminal copiando los archivos](https://bibliobox.copiona.com/assets/img/08.png)
 
 18. Luego en pi@192.168.100.1 dentro de /home/pi utilizamos el comando `mv` para mover los directorios del home a la carpeta host.
 ~~~bash
@@ -165,9 +165,18 @@ sudo mv -r /home/pi/biblioteca-guerrilla /var/www/html
 20. Por último, podemos conectar directamente la celda de carga con la raspberry-pi-3 y montar la red en cualquier sitio, independientemente de si hay corriente electrica o internet.
 
 # ¡A por islas de bibliotecas portátiles!
-![una bibliobox feliz :)](assets/img/09.jpg)
+![una bibliobox feliz :)](https://bibliobox.copiona.com/assets/img/09.jpg)
 
 # Fuentes
 1. [Setting up a Raspberry Pi as an access point in a standalone network (NAT)](https://www.raspberrypi.org/documentation/configuration/wireless/access-point.md)
 2. [Install Nginx Raspbian, and accelerate your Raspberry web server](https://howtoraspberrypi.com/install-nginx-raspbian-and-accelerate-your-raspberry-web-server/)
 3. [SSH-Raspbian](https://www.raspberrypi.org/forums/viewtopic.php?t=175143)
+
+
+# Bibliobox que andan por ahí
+
+* ~Void [@v0idifier en todon.nl](https://todon.nl/@v0idifier)
+* ~Librenauta [@librenauta en twitter](https://twitter.com/librenauta) o [@librenauta en mastodon](https://mastodon.social/@librenauta)
+
+[Void]
+![bibliobox de void](https://bibliobox.copiona.com/assets/img/10.jpg)
