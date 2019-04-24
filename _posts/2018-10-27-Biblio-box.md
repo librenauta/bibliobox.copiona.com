@@ -146,6 +146,11 @@ rsn_pairwise=CCMP
 sudo systemctl start hostapd
 sudo systemctl start dnsmasq
 ~~~
+luego usamos
+~~~bash
+sudo update-rc.d hostapd enable´
+~~~
+para dejar el servicio hostapd seteado en el inicio de la RPi.
 16. Antes de reiniciar vamos a chequear  tener el puerto 22 (SSH) abierto para poder comunicarnos via Wireless. Lo más fácil es utilizar el comando `sudo raspi-config` > 5 Interfacing Options > P2 SSH > Sí.
 
 17. Luego parado en la máquina [A] y conectada a la red biblio.box  ubicamos la ruta donde creamos la biblioteca-guerrilla y enviamos esa carpeta al home/pi/ de la raspberrypi con el comando `scp`.
