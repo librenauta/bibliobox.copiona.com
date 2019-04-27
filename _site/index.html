@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+       <meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+<title>Librenauta </title>
+<!---->
+<meta name="description" content="Sitio estático lleno de craneadas dinámicas">
+<link rel="canonical" href="http://localhost:4000/">
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Blog" />
+<meta name="twitter:description" content="Sitio estático lleno de craneadas dinámicas" />
+<meta name="twitter:image" content="http://localhost:4000" />
+<meta name="author" content="">
+<link rel="author" href="">
+<meta property="og:locale" content="">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Blog">
+<meta property="og:description" content="Sitio estático lleno de craneadas dinámicas">
+<meta property="og:url" content="http://localhost:4000/">
+<meta property="og:site_name" content="Librenauta">
+<link rel="stylesheet" href="/assets/vendor/normalize-css/normalize.css">
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rubik:400,400italic,700,700italic">
+<style>
+    html {
+      font-family: "Rubik", -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
+    }
+</style>
+<link rel="stylesheet" href="/assets/css/bf.css">
+   <body>
+       <div class="wrapper" id="blep">
+          <header>
+   <div class="menu">
+     <div class="logo">
+        <a href="/">Librenauta</a>
+        <object type="image/svg+xml" data="/assets/img/dactl.svg" class="logosvg">Your browser does not support svg images</object>
+     </div>
+       <ul>
+           <li><a href="/about">about</a>
+           <li><a href="/archive">archive</a>
+       </ul>
+   </div>
+   <div class="social">
+     <ul>
+       <li>
+            <a href="https://twitter.com/librenauta" target="_blank" class="smaller">
+              <span class="icon-twitter"></span>
+            </a>
+       <li>
+            <a href="https://github.com/librenauta" target="_blank" class="smaller">
+              <span class="icon-github"></span>
+            </a>
+       <li>
+            <a href="mailto:librenauta@riseup.net" target="_blank">
+              <span class="icon-mail_outline"></span>
+            </a>
+       <li>
+            <a href="/feed.xml" target="_blank">
+                <span class="icon-rss_feed"></span>
+            </a>
+       <li>
+            <a href="#" onclick="switchTheme()" title="Switch theme?">
+              <span class="icon-invert_colors" id="theme-switcher"></span>
+            </a>
+     </ul>
+   </div>
+</header>
+<article class="blog">
+<style>
+  .biblio-box {
+    margin-bottom: 2em;
+  }
+  .biblio-box::before {
+    background-image: url('/assets/img/biblio.box.jpg');
+    background-size: cover;
+    -webkit-filter: grayscale(1) brightness(0.5) contrast(0.5);
+    content:'';
+    position:absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: -2;
+  }
+  .biblio-box::after {
+    content:'';
+    position:absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background-color: rgba(255,0,100,0.8);
+    /*mix-blend-mode: darken;
+    mix-blend-mode: color-burn;
+    mix-blend-mode: hard-light;*/
+    mix-blend-mode: overlay;
+    z-index: -1;
+  }
+  .biblio-box-container,
+  .biblio-box-container::before,
+  .biblio-box-container::after {
+    height: 25rem;
+  }
+  .biblio-box-bleed-container,
+  .biblio-box-bleed-container::before,
+  .biblio-box-bleed-container::after {
+    height: 35rem;
+  }
+    @media (max-width: 48rem) {
+        .biblio-box-container,
+        .biblio-box-container::before,
+        .biblio-box-container::after{
+            height: 20rem;
+            margin-bottom: 3rem;
+        }
+    }
+</style>
+ <div class="
+    post-title-container
+        biblio-box biblio-box-container hero-hov
+  ">
+   <div class="heading-container hero-heading hero-heading-blog">
+     <h1>
+          <a href="/posts/biblio-box" title="¿Cómo hacer tu propia biblio.box?">¿Cómo hacer tu propia biblio.box?</a>
+     </h1>
+     <div class="
+        post-meta
+      ">
+        <span>27/10/2018</span>
+        <span>
+              <a href="/tag/cultura libre">#cultura libre</a>
+              <a href="/tag/bibliotecas libres">#bibliotecas libres</a>
+              <a href="/tag/libros">#libros</a>
+              <a href="/tag/biblioteca portátil">#biblioteca portátil</a>
+        </span>
+     </div>
+   </div>
+ </div>
+     <p class="lead">¿Querés tener una biblioteca portátil para compartir libros? en la siguiente entrada se detalla como crear una bibliobox usando el código de <a href="https://github.com/elKaZe/biblioteca-guerrilla">biblioteca-guerrilla</a> una raspberry pi y una celda de carga.
+<blockquote>
+ <p>Una bibliobox es un dispositivo que crea una red <a href="https://en.wikipedia.org/wiki/Wireless_LAN">WLAN</a> para poder conectarte y navegar un sitio estático que contiene una biblioteca digital.
+</blockquote>
+<p>Si bien el software puede utilizarce en varios dispositivos, esta instancia de biblioteca guerrilla será  montada en una raspberry pi.
+ En esta documentación se detallará ese procedimimiento
+*al estilo receta de cocina: ¿Qué necesitamos?
+<ul>
+ <li><a href="https://www.raspberrypi.org/products/raspberry-pi-3-model-b/">Raspberry PI 3 model B</a> [con placa de WiFi integrada]
+ <li>Monitor con hdmi para instalar <a href="https://www.raspberrypi.org/downloads/raspbian">Rasbian</a>  a la Raspberry PI 3
+ <li>Tarjeta de memoria + 8gb (para OS y Libros)
+ <li>Computadora con Gnu/linux[^1] instalado.
+ <li>Calibre instalado  con una biblioteca y libros.
+</ul>
+<h2 id="el-procedimiento-se-puede-dividir-en-3-etapas">El procedimiento se puede dividir en 3 etapas</h2>
+<ul>
+ <li>#1-Equipo [A] que generará el sitio estático con la biblioteca.
+ <li>#2-Equipo [B] que alojará la biblioteca virtual.
+ <li>#3-Copiar el sitio generado de [A] »[B]
+</ul>
+<h2 id="1-equipo-que-generará-el-sitio-estático-con-la-biblioteca">#1 Equipo que generará el sitio estático con la biblioteca.</h2>
+<ol>
+ <li>Instalar <a href="https://calibre-ebook.com">[Calibre]</a> este será el lugar donde volcaremos los libros y los organizarémos por etiquetas, autoras, series.
+ <li>Volcar libros en una biblioteca.
+ <li>
+   <p>Editar metadata de los libros y asegurarnos que tienen todos portadas [tapas], en el buscador de calibre podemos poner: <code class="highlighter-rouge">cover:false</code> para filtrar los libros que no tengan una tapa, y podemos crearle una en <code class="highlighter-rouge">Modificar metadatos &gt; Generar portada</code>
+ <li>Clonar el repositorio de <a href="https://github.com/elKaZe/biblioteca-guerrilla">[biblioteca-guerrilla]</a> <code class="highlighter-rouge">git clone https://github.com/elKaZe/biblioteca-guerrilla.git </code>
+   <blockquote>
+     <p>Biblioteca-guerrilla es un script escrito en python que utiliza la base de datos de calibre y los libros de la biblioteca para crear un sitio estático. para ejecutar el script que esta en ./biblioteca-guerrilla/app/freeze.py son necesarias algunas herramientas:
+   </blockquote>
+</ol>
+<ul>
+ <li>Instalar <a href="https://tutorial.djangogirls.org/es/python_installation/">[Python]</a>
+ <li>Instalar pipenv <code class="highlighter-rouge">pip install pipenv --user</code>
+ <li>Instalar las dependencias parado en ./biblioteca-guerrilla <code class="highlighter-rouge">pipenv install</code> [1]
+ <li>Luego iniciar el entorno de trabajo para poder generar la biblioteca <code class="highlighter-rouge">pipenv shell</code>
+ <li>Ahora que tenemos el entorno de trabajo con las dependencias vamos a editar el archivo ./biblioteca-guerrilla/app/settings.py y reemplazar la ruta donde esta nuestra biblioteca calibre y su archivo metadata.db en FREEZER_DESTINATION podemos editar la ruta donde guardará el sitio estático con la página.
+   <div class="language-python highlighter-rouge"><div class="highlight"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5</pre><td class="code"><pre><span class="n">CONECTOR_OPCIONES</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="s">"ruta"</span><span class="p">:</span> <span class="s">"ruta/a/la/bibliotecaDeCalibre/metadata.db"</span>
+  <span class="p">}</span>
+<span class="n">RUTA_BASE_LIBROS</span> <span class="o">=</span> <span class="s">"ruta/a/la/bibliotecaDeCalibre/"</span>
+<span class="n">FREEZER_DESTINATION</span> <span class="o">=</span> <span class="s">"/tmp/biblioteca-guerrilla/"</span>
+</pre></table>
+</div>
+   </div>
+   <p>[1] Aquí cree el directorio <code class="highlighter-rouge">mkdir miaubox</code> y clone el repositorio allí dentro.
+<img src="https://bibliobox.copiona.com/assets/img/02.png" alt="683x741" title="Large example image" />
+[2] Editando con nano el archivo settings.py
+<img src="https://bibliobox.copiona.com/assets/img/02.png" alt="683x741" title="Large example image" />
+[3] Ejecutando pipenv shell
+<img src="https://bibliobox.copiona.com/assets/img/03.png" alt="683x741" title="Large example image" />
+[4] Luego de editar y guardar settings.py podemos crear el sitio estático con <code class="highlighter-rouge">make generate-static-website</code> si no tenes <code class="highlighter-rouge">make</code> podes hacer <code class="highlighter-rouge">apt/pacman/dnf install make dependiendo de tu dsitribución Gnu/linux</code>
+</ul>
+<p>Ejecutando make generate-static-website
+<img src="https://bibliobox.copiona.com/assets/img/04.png" alt="683x741" title="Large example image" />
+[5] Para ejecutar un servidor de pruebas ejecutamos <code class="highlighter-rouge">make start-test-server</code> y podemos acceder a el vía <code class="highlighter-rouge">http://localhost:5000/</code>
+<p><img src="https://bibliobox.copiona.com/assets/img/05.png" alt="683x741" title="Large example image" />
+<p>[6] Con esto tenemos el sitio en /tmp/biblioteca-guerrilla/ ahora lo siguiente es preparar el equipo donde se alojará el sitio estático!
+<img src="https://bibliobox.copiona.com/assets/img/06.png" alt="683x741" title="Large example image" />
+<ul>
+ <li>Luego de agregar varios libros podemos realizar nuevamente el paso 5 y copiar la nueva web actualizada de /tmp/biblioteca-guerrilla.
+<img src="https://bibliobox.copiona.com/assets/img/07.png" alt="683x741" title="Large example image" />
+</ul>
+<h2 id="2--equipo-que-alojará-la-biblioteca">#2  Equipo que alojará la biblioteca.</h2>
+<p>-Estos pasos recomiendo hacerlos con un monitor enchufado a la raspberrypi.
+<ol>
+ <li>Instalación de OS en raspberry pi 3, en este <a href="https://www.raspberrypi.org/downloads/raspbian">link</a> podrás descargar la imagen de raspbian, la distribución optimizada de debian para instalar en raspberry pi, si no tenés monitor hdmi, podes instalat raspbian en la tarjeta de memoria sd desde linux con <a href="https://www.balena.io/etcher/">Etcher</a> e insertar un archivo llamado “ssh” en la partición “boot”. luego conectar tu raspberrypi a tu router  con un cable de red para poder descubrir que ip le asigna y apuntar desde una shell con: $ ssh pi@laipdelaraspi. luego de instalar <code class="highlighter-rouge">sudo apt-get update
+sudo apt-get upgrade</code>
+ <li>Cambio de contraseña de usuaria pi (por defecto). Con <code class="highlighter-rouge">sudo passwd</code> cambiamos la contraseña por defecto e introducimos 2 veces la nueva.
+ <li>Instalación de nginx como servidor Web <a href="https://howtoraspberrypi.com/install-nginx-raspbian-and-accelerate-your-raspberry-web-server/">Acá</a> hay una guía muy completa de como instalarlo y dejar el servicio funcionando (dejar el servicio significa que nginx el servidor web que instalaremos se iniciará cuando la raspberrypi inicie)
+ <li>Como raspbian viene con apache vamos a pararlo con:
+ <code class="highlighter-rouge">sudo /etc/init.d/apache2 stop</code>
+Luego le decimos con <a href="https://wiki.archlinux.org/index.php/systemd_(Espa%C3%B1ol)"><code class="highlighter-rouge">systemd</code></a> que no este enabled como servicio:
+<code class="highlighter-rouge">sudo systemctl disable apache2</code>
+ <li>
+   <p>Instalamos nginx y php-fpm
+<code class="highlighter-rouge">sudo apt install nginx php-fpm</code>
+ <li>Comenzamos a Configurar el Acces Point (utilizaremos el hardware wifi para crear una red Wlan y actuar de router)
+para esto necesitaremos hostapd: <code class="highlighter-rouge">sudo apt-get install dnsmasq hostapd</code>
+ <li>Como no configuramos nada todavía vamos a desactivar temporalmente dnsmasq y hostapd                       <br />
+<code class="highlighter-rouge">sudo systemctl stop dnsmasq
+sudo systemctl stop hostapd</code>
+ <li>
+   <p>Luego reiniciamos la raspberrypi con <code class="highlighter-rouge">sudo reboot</code>
+ <li>Estamos configurando una red inalámbrica para que actue como servidor, asique necesitaremos una ip estática asignada al puerto inalámbrico para luego  conectarnos a ella y que el dhcp nos asigne una ip como clientas.
+Para configurar la ip estática editamos el siguiente archivo:                         <br />
+ <code class="highlighter-rouge">sudo nano /etc/dhcpcd.conf</code> (nano es el editor de texto que viene por defecto en raspbian)
+alli podremos lo siguiente al final del archivo:
+   <div class="language-bash highlighter-rouge"><div class="highlight"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3</pre><td class="code"><pre>interface wlan0
+ static <span class="nv">ip_address</span><span class="o">=</span>192.168.100.1/24
+ nohook wpa_supplicant
+</pre></table>
+</div>
+   </div>
+   <p>static ip_address es la ip con la cual nos conectaremos via ssh luego                 <br />
+ <code class="highlighter-rouge">ssh pi@192.168.100.1</code>
+ <li>Luego restarteamos el servicio dhcp <code class="highlighter-rouge">sudo service dhcpcd restart</code> y tendremos una ip estática en wlan0
+ <li>El servicio DHCP es llamado por dnsmasq. por defecto el archivo dnsmasq.conf contiene mucha información y es mejor arrancar uno de cero, asque editamos el nombre con <code class="highlighter-rouge">sudo mv /etc/dnsmasq.conf /etc/dnsmasq.conf.orig</code> y dejamos un backup del archivo de configuración
+ <li>
+   <p>Luego iniciamos uno nuevo con <code class="highlighter-rouge">sudo nano /etc/dnsmasq.conf</code> y pegamos las siguentes lineas:               <br />
+<code class="highlighter-rouge">interface=wlan0      # Use the require wireless interface - usually wlan0
+  dhcp-range=192.168.100.2,192.168.100.24,255.255.255.0,24h</code>
+ <li>Ahora editaremos el archivo de configuración de Hostapd, el software para crear el acces point en:
+<code class="highlighter-rouge">sudo nano /etc/hostapd/hostapd.conf</code> en este archivo pondremos el nombre de la red inalámbrica y si queremos que tenga contraseña o no.
+</ol>
+<p>usar lo siguiente:
+<div class="language-bash highlighter-rouge"><div class="highlight"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14</pre><td class="code"><pre><span class="nv">interface</span><span class="o">=</span>wlan0
+<span class="nv">driver</span><span class="o">=</span>nl80211
+<span class="nv">ssid</span><span class="o">=</span>Biblio.box
+<span class="nv">hw_mode</span><span class="o">=</span>g
+<span class="nv">channel</span><span class="o">=</span>7
+<span class="nv">wmm_enabled</span><span class="o">=</span>0
+<span class="nv">macaddr_acl</span><span class="o">=</span>0
+<span class="nv">auth_algs</span><span class="o">=</span>1
+<span class="nv">ignore_broadcast_ssid</span><span class="o">=</span>0
+<span class="nv">wpa</span><span class="o">=</span>2
+<span class="nv">wpa_passphrase</span><span class="o">=</span>biblioteca
+<span class="nv">wpa_key_mgmt</span><span class="o">=</span>WPA-PSK
+<span class="nv">wpa_pairwise</span><span class="o">=</span>TKIP
+<span class="nv">rsn_pairwise</span><span class="o">=</span>CCMP
+</pre></table>
+</div>
+</div>
+<ul>
+ <li>En ssid= poner el nombre de la red inalámbrica
+ <li>En wpa_passphrase= poner la constraseña si es que la queremos.
+   <ol>
+     <li>Ahora necesitamos que el sistema encuentre el archivo asi que en <code class="highlighter-rouge">sudo nano /etc/default/hostapd</code> buscamos #DAEMON_CONF y escribimos <code class="highlighter-rouge">DAEMON_CONF="/etc/hostapd/hostapd.conf"</code>
+   </ol>
+</ul>
+<ol>
+ <li>Iniciamos los servicios dnsmasq &amp; hostapd
+   <div class="language-bash highlighter-rouge"><div class="highlight"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2</pre><td class="code"><pre>sudo systemctl start hostapd
+sudo systemctl start dnsmasq
+</pre></table>
+</div>
+   </div>
+   <p>luego usamos
+   <div class="language-bash highlighter-rouge"><div class="highlight"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1</pre><td class="code"><pre>sudo update-rc.d hostapd <span class="nb">enable</span>´
+</pre></table>
+</div>
+   </div>
+   <p>para dejar el servicio hostapd seteado en el inicio de la RPi.
+</ol>
+<p>15.1 Para no tener que ponerla ip 192.168.100.1 para entrar a la biblioteca vamos a editar el archivo <code class="highlighter-rouge">sudo nano /etc/hosts</code> e ingresar la siguiente linea:
+<div class="language-bash highlighter-rouge"><div class="highlight"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1</pre><td class="code"><pre>192.168.100.1 biblio.box
+</pre></table>
+</div>
+</div>
+<p>ahora podremos entrar desde el navegador escribiendo biblio.box
+<ol>
+ <li>
+   <p>Antes de reiniciar vamos a chequear  tener el puerto 22 (SSH) abierto para poder comunicarnos via Wireless. Lo más fácil es utilizar el comando <code class="highlighter-rouge">sudo raspi-config</code> &gt; 5 Interfacing Options &gt; P2 SSH &gt; Sí.
+ <li>Luego parado en la máquina [A] y conectada a la red biblio.box  ubicamos la ruta donde creamos la biblioteca-guerrilla y enviamos esa carpeta al home/pi/ de la raspberrypi con el comando <code class="highlighter-rouge">scp</code>.
+Escribimos -r para que copie los directorios y subdirectorios.
+   <ul>
+     <li>El comando scp copia y envía por ssh lo que indiquemos, primero hay que indicar el directorio a copiar y luego la conexión via ssh al equipo de destino, seguido de la ubicación de la carpeta destino.
+       <div class="language-bash highlighter-rouge"><div class="highlight"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1</pre><td class="code"><pre>scp -r /tmp/biblioteca-guerrilla/ pi@192.168.100.1:/home/pi/
+</pre></table>
+</div>
+       </div>
+       <p><img src="https://bibliobox.copiona.com/assets/img/08.png" alt="screenshot de una terminal copiando los archivos" />
+   </ul>
+ <li>Luego en pi@192.168.100.1 dentro de /home/pi utilizamos el comando <code class="highlighter-rouge">mv</code> para mover los directorios del home a la carpeta host.
+   <div class="language-bash highlighter-rouge"><div class="highlight"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1</pre><td class="code"><pre>sudo mv -r /home/pi/biblioteca-guerrilla /var/www/html
+</pre></table>
+</div>
+   </div>
+ <li>
+   <p>Por último nos conectamos a la red vía movil o con una computadora y tecleamos en el navegador <code class="highlighter-rouge">192.168.100.1</code> e ingresamos a la biblioteca portátil. si ingresamos desde un celular, es necesario que desactivemos los datos móviles, ya que al ingresar la ip, el navegador intentará hacer una petición fuera de la red wlan0.
+ <li>Por último, podemos conectar directamente la celda de carga con la raspberry-pi-3 y montar la red en cualquier sitio, independientemente de si hay corriente electrica o internet.
+</ol>
+<h1 id="a-por-islas-de-bibliotecas-portátiles">¡A por islas de bibliotecas portátiles!</h1>
+<p><img src="https://bibliobox.copiona.com/assets/img/09.jpg" alt="una bibliobox feliz :)" />
+<img src="https://bibliobox.copiona.com/assets/img/11.jpg" alt="una bibliobox feliz :)" />
+<img src="https://bibliobox.copiona.com/assets/img/12.jpg" alt="una bibliobox feliz :)" />
+<h1 id="fuentes">Fuentes</h1>
+<ol>
+ <li><a href="https://www.raspberrypi.org/documentation/configuration/wireless/access-point.md">Setting up a Raspberry Pi as an access point in a standalone network (NAT)</a>
+ <li><a href="https://howtoraspberrypi.com/install-nginx-raspbian-and-accelerate-your-raspberry-web-server/">Install Nginx Raspbian, and accelerate your Raspberry web server</a>
+ <li><a href="https://www.raspberrypi.org/forums/viewtopic.php?t=175143">SSH-Raspbian</a>
+</ol>
+<h1 id="bibliobox-que-andan-por-ahí">Bibliobox que andan por ahí</h1>
+<ul>
+ <li>~Void <a href="https://todon.nl/@v0idifier">@v0idifier en todon.nl</a>
+ <li>~Librenauta <a href="https://twitter.com/librenauta">@librenauta en twitter</a> o <a href="https://mastodon.social/@librenauta">@librenauta en mastodon</a>
+</ul>
+<p>[Void]
+<img src="https://bibliobox.copiona.com/assets/img/10.jpg" alt="bibliobox de void" />
+</article>
+<nav class="pagination" role="navigation">
+<hr/>
+ <ul>
+   <li class="pagination-item-prev" >
+      <span>&laquo; Previous</span>
+   <li class="pagination-item-next" >
+      <span>Next &raquo;</span>
+ </ul>
+<hr/>
+</nav>
+           <footer>
+    <span>Sitio estático lleno de craneadas dinámicas</span>
+    <span>written by librenauta</span>
+</footer>
+       </div>
+<script type="text/javascript" src="/assets/js/theme.js"></script>
+<script type="text/javascript" src="/assets/js/barefoot.js"></script>
+    

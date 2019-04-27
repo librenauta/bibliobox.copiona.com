@@ -81,7 +81,7 @@ Ejecutando make generate-static-website
 #2  Equipo que alojará la biblioteca.
 -----------------------------------------
 -Estos pasos recomiendo hacerlos con un monitor enchufado a la raspberrypi.
-1. Instalación de OS en raspberry pi 3, en este [link](https://www.raspberrypi.org/downloads/raspbian) podrás descargar la imagen de raspbian, la distribución optimizada de debian para instalar en raspberry pi, luego de instalar `sudo apt-get update
+1. Instalación de OS en raspberry pi 3, en este [link](https://www.raspberrypi.org/downloads/raspbian) podrás descargar la imagen de raspbian, la distribución optimizada de debian para instalar en raspberry pi, si no tenés monitor hdmi, podes instalat raspbian en la tarjeta de memoria sd desde linux con [Etcher](https://www.balena.io/etcher/) e insertar un archivo llamado "ssh" en la partición "boot". luego conectar tu raspberrypi a tu router  con un cable de red para poder descubrir que ip le asigna y apuntar desde una shell con: $ ssh pi@laipdelaraspi. luego de instalar `sudo apt-get update
 sudo apt-get upgrade`
 2. Cambio de contraseña de usuaria pi (por defecto). Con `sudo passwd` cambiamos la contraseña por defecto e introducimos 2 veces la nueva.
 3. Instalación de nginx como servidor Web [Acá](https://howtoraspberrypi.com/install-nginx-raspbian-and-accelerate-your-raspberry-web-server/) hay una guía muy completa de como instalarlo y dejar el servicio funcionando (dejar el servicio significa que nginx el servidor web que instalaremos se iniciará cuando la raspberrypi inicie)
@@ -151,6 +151,12 @@ luego usamos
 sudo update-rc.d hostapd enable´
 ~~~
 para dejar el servicio hostapd seteado en el inicio de la RPi.
+
+15.1 Para no tener que ponerla ip 192.168.100.1 para entrar a la biblioteca vamos a editar el archivo `sudo nano /etc/hosts` e ingresar la siguiente linea:
+~~~bash
+192.168.100.1 biblio.box
+~~~
+ahora podremos entrar desde el navegador escribiendo biblio.box
 16. Antes de reiniciar vamos a chequear  tener el puerto 22 (SSH) abierto para poder comunicarnos via Wireless. Lo más fácil es utilizar el comando `sudo raspi-config` > 5 Interfacing Options > P2 SSH > Sí.
 
 17. Luego parado en la máquina [A] y conectada a la red biblio.box  ubicamos la ruta donde creamos la biblioteca-guerrilla y enviamos esa carpeta al home/pi/ de la raspberrypi con el comando `scp`.
@@ -171,7 +177,8 @@ sudo mv -r /home/pi/biblioteca-guerrilla /var/www/html
 
 # ¡A por islas de bibliotecas portátiles!
 ![una bibliobox feliz :)](https://bibliobox.copiona.com/assets/img/09.jpg)
-
+![una bibliobox feliz :)](https://bibliobox.copiona.com/assets/img/11.jpg)
+![una bibliobox feliz :)](https://bibliobox.copiona.com/assets/img/12.jpg)
 # Fuentes
 1. [Setting up a Raspberry Pi as an access point in a standalone network (NAT)](https://www.raspberrypi.org/documentation/configuration/wireless/access-point.md)
 2. [Install Nginx Raspbian, and accelerate your Raspberry web server](https://howtoraspberrypi.com/install-nginx-raspbian-and-accelerate-your-raspberry-web-server/)
