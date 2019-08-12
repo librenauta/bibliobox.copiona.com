@@ -5,9 +5,45 @@
     <description>Sitio estático lleno de craneadas dinámicas</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 27 Apr 2019 02:30:42 -0300</pubDate>
-    <lastBuildDate>Sat, 27 Apr 2019 02:30:42 -0300</lastBuildDate>
+    <pubDate>Mon, 12 Aug 2019 02:24:38 -0300</pubDate>
+    <lastBuildDate>Mon, 12 Aug 2019 02:24:38 -0300</lastBuildDate>
     <generator>Jekyll v3.8.4</generator>
+    
+      <item>
+        <title>¿Media difusión para tu bibliobox?</title>
+        <description>&lt;p&gt;¿Querés tener una biblioteca portátil para compartir libros? en la siguiente entrada se detalla como crear una bibliobox usando el código de [biblioteca-guerrilla](https://&lt;/p&gt;
+&lt;h1 id=&quot;bibliobox-en-el-parque-saavedra-laplata&quot;&gt;Bibliobox en el parque saavedra #laplata&lt;/h1&gt;
+&lt;p&gt;&lt;img src=&quot;https://bibliobox.copiona.com/assets/img/13.jpg&quot; alt=&quot;una bibliobox feliz :)&quot; /&gt;
+&lt;img src=&quot;https://bibliobox.copiona.com/assets/img/14.jpg&quot; alt=&quot;una bibliobox feliz :)&quot; /&gt;
+&lt;img src=&quot;https://bibliobox.copiona.com/assets/img/15.jpg&quot; alt=&quot;una bibliobox feliz :)&quot; /&gt;
+y banner de cómo conectarte [11/08/2019]
+&lt;img src=&quot;https://bibliobox.copiona.com/assets/img/16.jpg&quot; alt=&quot;una bibliobox feliz :)&quot; /&gt;
+En este &lt;a href=&quot;https://bibliobox.copiona.com/assets/dwn/bibliobox-como-conectarse.pdf&quot;&gt;link&lt;/a&gt; podes descargar el cartel para imprimir&lt;/p&gt;
+&lt;h1 id=&quot;querés-enviarme-libros-para-esta-copiona-especifica&quot;&gt;Querés enviarme libros para esta copiona especifica?&lt;/h1&gt;
+&lt;p&gt;&lt;img src=&quot;https://bibliobox.copiona.com/assets/img/17.png&quot; alt=&quot;una bibliobox feliz :)&quot; /&gt;
+&lt;img src=&quot;https://bibliobox.copiona.com/assets/img/18.png&quot; alt=&quot;una bibliobox feliz :)&quot; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;bibliobox-que-andan-por-ahí&quot;&gt;Bibliobox que andan por ahí&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;~Void &lt;a href=&quot;https://todon.nl/@v0idifier&quot;&gt;@v0idifier en todon.nl&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;~Librenauta &lt;a href=&quot;https://twitter.com/librenauta&quot;&gt;@librenauta en twitter&lt;/a&gt; o &lt;a href=&quot;https://mastodon.social/@librenauta&quot;&gt;@librenauta en mastodon&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Sun, 11 Aug 2019 00:00:00 -0300</pubDate>
+        <link>http://localhost:4000/posts/difusion</link>
+        <guid isPermaLink="true">http://localhost:4000/posts/difusion</guid>
+        
+        <category>cultura libre</category>
+        
+        <category>bibliotecas libres</category>
+        
+        <category>libros</category>
+        
+        <category>biblioteca portátil</category>
+        
+        
+      </item>
     
       <item>
         <title>¿Cómo hacer tu propia biblio.box?</title>
@@ -232,7 +268,7 @@ Escribimos -r para que copie los directorios y subdirectorios.
   &lt;li&gt;Por último, podemos conectar directamente la celda de carga con la raspberry-pi-3 y montar la red en cualquier sitio, independientemente de si hay corriente electrica o internet.&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;h1 id=&quot;a-por-islas-de-bibliotecas-portátiles&quot;&gt;¡A por islas de bibliotecas portátiles!&lt;/h1&gt;
+&lt;h1 id=&quot;a-por-islas-de-bibliotecas-portátiles-virtuales&quot;&gt;¡A por islas de bibliotecas portátiles virtuales!&lt;/h1&gt;
 &lt;p&gt;&lt;img src=&quot;https://bibliobox.copiona.com/assets/img/09.jpg&quot; alt=&quot;una bibliobox feliz :)&quot; /&gt;
 &lt;img src=&quot;https://bibliobox.copiona.com/assets/img/11.jpg&quot; alt=&quot;una bibliobox feliz :)&quot; /&gt;
 &lt;img src=&quot;https://bibliobox.copiona.com/assets/img/12.jpg&quot; alt=&quot;una bibliobox feliz :)&quot; /&gt;&lt;/p&gt;

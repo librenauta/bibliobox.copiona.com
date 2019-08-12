@@ -1,7 +1,7 @@
 # Base blog settings
 baseurl                      : "" # the subpath of your site,                         # e.g. /blog/
                               # set to '' in case of hosting on GitHub
-url                          : "bibliobox.copiona.com" # the base hostname & protocol for your site
+url                          : "http://bibliobox.copiona.com" # the base hostname & protocol for your site
                                   # `http://<username>.github.io` - for GitHub
 
 blog:
@@ -17,7 +17,7 @@ blog:
   hero_placeholder           : "assets/img/generic_hero.jpg" # placeholder for hero image
   excerpts                   : false # show excerpts instead of full post content on blog page
   inline_footnotes           : true # enable/disable barefoot inline footnotes
-  titles_only                : false # show post titles only on main blog page
+  titles_only                : true # show post titles only on main blog page
 
 # Fonts
   font                       : '"Rubik", -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif'
@@ -38,7 +38,6 @@ author:
   google_analytics          : # 'UA-XXXXXXXX-X'
   photo                     : "assets/img/p1.jpg"
   photo2x                   : "assets/img/p1.jpg"
-
 
 
 ## !!

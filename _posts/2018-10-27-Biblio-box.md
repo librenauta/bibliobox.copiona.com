@@ -175,7 +175,7 @@ sudo mv -r /home/pi/biblioteca-guerrilla /var/www/html
 
 20. Por último, podemos conectar directamente la celda de carga con la raspberry-pi-3 y montar la red en cualquier sitio, independientemente de si hay corriente electrica o internet.
 
-# ¡A por islas de bibliotecas portátiles!
+# ¡A por islas de bibliotecas portátiles virtuales!
 ![una bibliobox feliz :)](https://bibliobox.copiona.com/assets/img/09.jpg)
 ![una bibliobox feliz :)](https://bibliobox.copiona.com/assets/img/11.jpg)
 ![una bibliobox feliz :)](https://bibliobox.copiona.com/assets/img/12.jpg)
@@ -183,7 +183,6 @@ sudo mv -r /home/pi/biblioteca-guerrilla /var/www/html
 1. [Setting up a Raspberry Pi as an access point in a standalone network (NAT)](https://www.raspberrypi.org/documentation/configuration/wireless/access-point.md)
 2. [Install Nginx Raspbian, and accelerate your Raspberry web server](https://howtoraspberrypi.com/install-nginx-raspbian-and-accelerate-your-raspberry-web-server/)
 3. [SSH-Raspbian](https://www.raspberrypi.org/forums/viewtopic.php?t=175143)
-
 
 # Bibliobox que andan por ahí
 
