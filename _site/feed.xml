@@ -3,22 +3,25 @@
   <channel>
     <title>Librenauta</title>
     <description>Sitio estático lleno de craneadas dinámicas</description>
-    <link>http://localhost:4000/</link>
-    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 12 Aug 2019 02:24:38 -0300</pubDate>
-    <lastBuildDate>Mon, 12 Aug 2019 02:24:38 -0300</lastBuildDate>
+    <link>http://bibliobox.copiona.com/</link>
+    <atom:link href="http://bibliobox.copiona.com/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Mon, 12 Aug 2019 02:34:19 -0300</pubDate>
+    <lastBuildDate>Mon, 12 Aug 2019 02:34:19 -0300</lastBuildDate>
     <generator>Jekyll v3.8.4</generator>
     
       <item>
         <title>¿Media difusión para tu bibliobox?</title>
-        <description>&lt;p&gt;¿Querés tener una biblioteca portátil para compartir libros? en la siguiente entrada se detalla como crear una bibliobox usando el código de [biblioteca-guerrilla](https://&lt;/p&gt;
+        <description>&lt;p&gt;¿Querés tener una biblioteca portátil para compartir libros?&lt;/p&gt;
 &lt;h1 id=&quot;bibliobox-en-el-parque-saavedra-laplata&quot;&gt;Bibliobox en el parque saavedra #laplata&lt;/h1&gt;
 &lt;p&gt;&lt;img src=&quot;https://bibliobox.copiona.com/assets/img/13.jpg&quot; alt=&quot;una bibliobox feliz :)&quot; /&gt;
 &lt;img src=&quot;https://bibliobox.copiona.com/assets/img/14.jpg&quot; alt=&quot;una bibliobox feliz :)&quot; /&gt;
-&lt;img src=&quot;https://bibliobox.copiona.com/assets/img/15.jpg&quot; alt=&quot;una bibliobox feliz :)&quot; /&gt;
-y banner de cómo conectarte [11/08/2019]
-&lt;img src=&quot;https://bibliobox.copiona.com/assets/img/16.jpg&quot; alt=&quot;una bibliobox feliz :)&quot; /&gt;
-En este &lt;a href=&quot;https://bibliobox.copiona.com/assets/dwn/bibliobox-como-conectarse.pdf&quot;&gt;link&lt;/a&gt; podes descargar el cartel para imprimir&lt;/p&gt;
+&lt;img src=&quot;https://bibliobox.copiona.com/assets/img/15.jpg&quot; alt=&quot;una bibliobox feliz :)&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;y banner de cómo conectarte [11/08/2019]&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://bibliobox.copiona.com/assets/img/16.png&quot; alt=&quot;una bibliobox feliz :)&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;En este &lt;a href=&quot;https://bibliobox.copiona.com/assets/dwn/bibliobox-como-conectarse.pdf&quot;&gt;link&lt;/a&gt; podes descargar el cartel para imprimir&lt;/p&gt;
 &lt;h1 id=&quot;querés-enviarme-libros-para-esta-copiona-especifica&quot;&gt;Querés enviarme libros para esta copiona especifica?&lt;/h1&gt;
 &lt;p&gt;&lt;img src=&quot;https://bibliobox.copiona.com/assets/img/17.png&quot; alt=&quot;una bibliobox feliz :)&quot; /&gt;
 &lt;img src=&quot;https://bibliobox.copiona.com/assets/img/18.png&quot; alt=&quot;una bibliobox feliz :)&quot; /&gt;&lt;/p&gt;
@@ -31,8 +34,8 @@ En este &lt;a href=&quot;https://bibliobox.copiona.com/assets/dwn/bibliobox-como
 &lt;/ul&gt;
 </description>
         <pubDate>Sun, 11 Aug 2019 00:00:00 -0300</pubDate>
-        <link>http://localhost:4000/posts/difusion</link>
-        <guid isPermaLink="true">http://localhost:4000/posts/difusion</guid>
+        <link>http://bibliobox.copiona.com/posts/difusion</link>
+        <guid isPermaLink="true">http://bibliobox.copiona.com/posts/difusion</guid>
         
         <category>cultura libre</category>
         
@@ -290,8 +293,8 @@ Escribimos -r para que copie los directorios y subdirectorios.
 &lt;img src=&quot;https://bibliobox.copiona.com/assets/img/10.jpg&quot; alt=&quot;bibliobox de void&quot; /&gt;&lt;/p&gt;
 </description>
         <pubDate>Sat, 27 Oct 2018 00:00:00 -0300</pubDate>
-        <link>http://localhost:4000/posts/biblio-box</link>
-        <guid isPermaLink="true">http://localhost:4000/posts/biblio-box</guid>
+        <link>http://bibliobox.copiona.com/posts/biblio-box</link>
+        <guid isPermaLink="true">http://bibliobox.copiona.com/posts/biblio-box</guid>
         
         <category>cultura libre</category>
         
