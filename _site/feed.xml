@@ -3,10 +3,10 @@
   <channel>
     <title>Librenauta</title>
     <description>Sitio estático lleno de craneadas dinámicas</description>
-    <link>http://bibliobox.copiona.com/</link>
-    <atom:link href="http://bibliobox.copiona.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 12 Aug 2019 02:34:19 -0300</pubDate>
-    <lastBuildDate>Mon, 12 Aug 2019 02:34:19 -0300</lastBuildDate>
+    <link>http://localhost:4000/</link>
+    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Tue, 27 Aug 2019 21:53:01 -0300</pubDate>
+    <lastBuildDate>Tue, 27 Aug 2019 21:53:01 -0300</lastBuildDate>
     <generator>Jekyll v3.8.4</generator>
     
       <item>
@@ -34,8 +34,8 @@
 &lt;/ul&gt;
 </description>
         <pubDate>Sun, 11 Aug 2019 00:00:00 -0300</pubDate>
-        <link>http://bibliobox.copiona.com/posts/difusion</link>
-        <guid isPermaLink="true">http://bibliobox.copiona.com/posts/difusion</guid>
+        <link>http://localhost:4000/posts/difusion</link>
+        <guid isPermaLink="true">http://localhost:4000/posts/difusion</guid>
         
         <category>cultura libre</category>
         
@@ -274,9 +274,11 @@ Escribimos -r para que copie los directorios y subdirectorios.
 &lt;h1 id=&quot;a-por-islas-de-bibliotecas-portátiles-virtuales&quot;&gt;¡A por islas de bibliotecas portátiles virtuales!&lt;/h1&gt;
 &lt;p&gt;&lt;img src=&quot;https://bibliobox.copiona.com/assets/img/09.jpg&quot; alt=&quot;una bibliobox feliz :)&quot; /&gt;
 &lt;img src=&quot;https://bibliobox.copiona.com/assets/img/11.jpg&quot; alt=&quot;una bibliobox feliz :)&quot; /&gt;
-&lt;img src=&quot;https://bibliobox.copiona.com/assets/img/12.jpg&quot; alt=&quot;una bibliobox feliz :)&quot; /&gt;&lt;/p&gt;
+&lt;img src=&quot;https://bibliobox.copiona.com/assets/img/12.jpg&quot; alt=&quot;una bibliobox feliz :)&quot; /&gt;
+&lt;img src=&quot;https://bibliobox.copiona.com/assets/img/14.jpg&quot; alt=&quot;una bibliobox feliz :)&quot; /&gt;&lt;/p&gt;
 &lt;h1 id=&quot;fuentes&quot;&gt;Fuentes&lt;/h1&gt;
 &lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/elKaZe/biblioteca-guerrilla&quot;&gt;biblioteca-guerrilla by elKaZe&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://www.raspberrypi.org/documentation/configuration/wireless/access-point.md&quot;&gt;Setting up a Raspberry Pi as an access point in a standalone network (NAT)&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://howtoraspberrypi.com/install-nginx-raspbian-and-accelerate-your-raspberry-web-server/&quot;&gt;Install Nginx Raspbian, and accelerate your Raspberry web server&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://www.raspberrypi.org/forums/viewtopic.php?t=175143&quot;&gt;SSH-Raspbian&lt;/a&gt;&lt;/li&gt;
@@ -290,11 +292,20 @@ Escribimos -r para que copie los directorios y subdirectorios.
 &lt;/ul&gt;
 
 &lt;p&gt;[Void]
-&lt;img src=&quot;https://bibliobox.copiona.com/assets/img/10.jpg&quot; alt=&quot;bibliobox de void&quot; /&gt;&lt;/p&gt;
+&lt;img src=&quot;https://bibliobox.copiona.com/assets/img/10.jpg&quot; alt=&quot;bibliobox de void&quot; /&gt;
+#Lugares donde participé con la bibliobox&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;https://ranchoelectronico.org/primer-encuentro-de-tecnologias-editoriales-libres/&quot;&gt;Rancho Electrónico (mx) TED&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://vimeo.com/302743782&quot;&gt;MIAU, con utopía pirata&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.bariloche.gov.ar/noticia2014.php?noticia=9742&quot;&gt;FABlab , #Aaronswartzday (Bariloche, AR)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://flisol.lafuenteunlp.com.ar/&quot;&gt;Flisol La plata, (festival latinoamericano de instalación de software libre)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://radioslibres.net/crea-tu-biblioteca-digital-portatil/&quot;&gt;Radioslibres.net&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://twitter.com/librenauta/status/981925501534134272&quot;&gt;F.L.I.A la plata 2018&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
 </description>
         <pubDate>Sat, 27 Oct 2018 00:00:00 -0300</pubDate>
-        <link>http://bibliobox.copiona.com/posts/biblio-box</link>
-        <guid isPermaLink="true">http://bibliobox.copiona.com/posts/biblio-box</guid>
+        <link>http://localhost:4000/posts/biblio-box</link>
+        <guid isPermaLink="true">http://localhost:4000/posts/biblio-box</guid>
         
         <category>cultura libre</category>
         

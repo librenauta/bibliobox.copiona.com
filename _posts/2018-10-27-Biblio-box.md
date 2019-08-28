@@ -179,7 +179,9 @@ sudo mv -r /home/pi/biblioteca-guerrilla /var/www/html
 ![una bibliobox feliz :)](https://bibliobox.copiona.com/assets/img/09.jpg)
 ![una bibliobox feliz :)](https://bibliobox.copiona.com/assets/img/11.jpg)
 ![una bibliobox feliz :)](https://bibliobox.copiona.com/assets/img/12.jpg)
+![una bibliobox feliz :)](https://bibliobox.copiona.com/assets/img/14.jpg)
 # Fuentes
+0. [biblioteca-guerrilla by elKaZe](https://github.com/elKaZe/biblioteca-guerrilla)
 1. [Setting up a Raspberry Pi as an access point in a standalone network (NAT)](https://www.raspberrypi.org/documentation/configuration/wireless/access-point.md)
 2. [Install Nginx Raspbian, and accelerate your Raspberry web server](https://howtoraspberrypi.com/install-nginx-raspbian-and-accelerate-your-raspberry-web-server/)
 3. [SSH-Raspbian](https://www.raspberrypi.org/forums/viewtopic.php?t=175143)
@@ -191,3 +193,10 @@ sudo mv -r /home/pi/biblioteca-guerrilla /var/www/html
 
 [Void]
 ![bibliobox de void](https://bibliobox.copiona.com/assets/img/10.jpg)
+#Lugares donde participé con la bibliobox
+1. [Rancho Electrónico (mx) TED](https://ranchoelectronico.org/primer-encuentro-de-tecnologias-editoriales-libres/ )
+2. [MIAU, con utopía pirata](https://vimeo.com/302743782)
+3. [FABlab , #Aaronswartzday (Bariloche, AR)](http://www.bariloche.gov.ar/noticia2014.php?noticia=9742)
+4. [Flisol La plata, (festival latinoamericano de instalación de software libre)](http://flisol.lafuenteunlp.com.ar/)
+5. [Radioslibres.net](https://radioslibres.net/crea-tu-biblioteca-digital-portatil/)
+6. [F.L.I.A la plata 2018](https://twitter.com/librenauta/status/981925501534134272)
