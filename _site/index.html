@@ -7,7 +7,7 @@
 <title>Librenauta </title>
 <!---->
 <meta name="description" content="Sitio estático lleno de craneadas dinámicas">
-<link rel="canonical" href="https://bibliobox.copiona.com/">
+<link rel="canonical" href="http://localhost:4000/">
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:title" content="Blog" />
 <meta name="twitter:description" content="Sitio estático lleno de craneadas dinámicas" />
@@ -18,7 +18,7 @@
 <meta property="og:type" content="article">
 <meta property="og:title" content="Blog">
 <meta property="og:description" content="Sitio estático lleno de craneadas dinámicas">
-<meta property="og:url" content="https://bibliobox.copiona.com/">
+<meta property="og:url" content="http://localhost:4000/">
 <meta property="og:site_name" content="Librenauta">
 <link rel="stylesheet" href="/assets/vendor/normalize-css/normalize.css">
 <link rel="stylesheet" href="/assets/css/main.css">
@@ -67,6 +67,77 @@
      </ul>
    </div>
 </header>
+<article class="blog">
+<style>
+  .presentacion {
+    margin-bottom: 2em;
+  }
+  .presentacion::before {
+    background-image: url('/assets/img/biblio.box.jpg');
+    background-size: cover;
+    -webkit-filter: grayscale(1) brightness(0.5) contrast(0.5);
+    content:'';
+    position:absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: -2;
+  }
+  .presentacion::after {
+    content:'';
+    position:absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background-color: 0.8);
+    /*mix-blend-mode: darken;
+    mix-blend-mode: color-burn;
+    mix-blend-mode: hard-light;*/
+    mix-blend-mode: overlay;
+    z-index: -1;
+  }
+  .presentacion-container,
+  .presentacion-container::before,
+  .presentacion-container::after {
+    height: 25rem;
+  }
+  .presentacion-bleed-container,
+  .presentacion-bleed-container::before,
+  .presentacion-bleed-container::after {
+    height: 35rem;
+  }
+    @media (max-width: 48rem) {
+        .presentacion-container,
+        .presentacion-container::before,
+        .presentacion-container::after{
+            height: 20rem;
+            margin-bottom: 3rem;
+        }
+    }
+</style>
+ <div class="
+    post-title-container
+        presentacion presentacion-container hero-hov
+  ">
+   <div class="heading-container hero-heading hero-heading-blog">
+     <h1>
+          <a href="/posts/presentacion.html" title="Presentación bibliobox">Presentación bibliobox</a>
+     </h1>
+     <div class="
+        post-meta
+      ">
+        <span>14/11/2019</span>
+        <span>
+              <a href="/tag/cultura libre">#cultura libre</a>
+              <a href="/tag/bibliotecas libres">#bibliotecas libres</a>
+              <a href="/tag/libros">#libros</a>
+              <a href="/tag/biblioteca portátil">#biblioteca portátil</a>
+        </span>
+     </div>
+   </div>
+ </div>
+</article>
+ <hr>
 <article class="blog">
 <style>
   .difusion {

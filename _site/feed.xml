@@ -5,9 +5,41 @@
     <description>Sitio estático lleno de craneadas dinámicas</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 27 Aug 2019 21:53:01 -0300</pubDate>
-    <lastBuildDate>Tue, 27 Aug 2019 21:53:01 -0300</lastBuildDate>
+    <pubDate>Thu, 14 Nov 2019 11:50:35 -0300</pubDate>
+    <lastBuildDate>Thu, 14 Nov 2019 11:50:35 -0300</lastBuildDate>
     <generator>Jekyll v3.8.4</generator>
+    
+      <item>
+        <title>Presentación bibliobox</title>
+        <description>&lt;p&gt;#presentaciones
+#Lugares donde participé con la bibliobox&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;https://ranchoelectronico.org/primer-encuentro-de-tecnologias-editoriales-libres/&quot;&gt;Rancho Electrónico (mx) TED&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://vimeo.com/302743782&quot;&gt;MIAU, con utopía pirata&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.bariloche.gov.ar/noticia2014.php?noticia=9742&quot;&gt;FABlab , #Aaronswartzday (Bariloche, AR)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://flisol.lafuenteunlp.com.ar/&quot;&gt;Flisol La plata “2018”, (festival latinoamericano de instalación de software libre)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://radioslibres.net/crea-tu-biblioteca-digital-portatil/&quot;&gt;Radioslibres.net&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://twitter.com/librenauta/status/981925501534134272&quot;&gt;F.L.I.A la plata “2018”&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;PPT para el miau 2019 &lt;a href=&quot;https://bibliobox.copiona.com/_site-ppt/bibliobox.html&quot;&gt;link&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;F.L.I.A La Plata “2019”&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://aaronswartzday.partidopirata.com.ar&quot;&gt;AaronSwartzDay2019 en  La Plata 2019 junto a el PIP &amp;amp; Biblioteca Osmiornica &lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://festival.creativecommons.uy/&quot;&gt;Semana de La Cultura Libre 2019 - Uruguay &lt;/a&gt; - &lt;a href=&quot;https://bibliobox.copiona.com/_site-ppt/bibliobox.html&quot;&gt;link&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+        <pubDate>Thu, 14 Nov 2019 00:00:00 -0300</pubDate>
+        <link>http://localhost:4000/posts/presentacion</link>
+        <guid isPermaLink="true">http://localhost:4000/posts/presentacion</guid>
+        
+        <category>cultura libre</category>
+        
+        <category>bibliotecas libres</category>
+        
+        <category>libros</category>
+        
+        <category>biblioteca portátil</category>
+        
+        
+      </item>
     
       <item>
         <title>¿Media difusión para tu bibliobox?</title>
