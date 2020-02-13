@@ -11,12 +11,12 @@
 -->
 <meta name="description" content="Una bibliobox es una biblioteca portátil ambulante">
 <meta name="keywords" content="cultura libre, bibliotecas libres, libros, biblioteca portátil">
-<link rel="canonical" href="http://localhost:4000/posts/biblio-box">
+<link rel="canonical" href="https://bibliobox.copiona.com/posts/biblio-box">
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:title" content="¿Cómo hacer tu propia biblio.box?" />
 <meta name="twitter:description" content="Una bibliobox es una biblioteca portátil ambulante
 " />
-<meta name="twitter:image" content="http://localhost:4000" />
+<meta name="twitter:image" content="https://bibliobox.copiona.com" />
 <meta name="author" content="">
 <link rel="author" href="">
 <meta property="og:locale" content="">
@@ -24,7 +24,7 @@
 <meta property="og:title" content="¿Cómo hacer tu propia biblio.box?">
 <meta property="og:description" content="Una bibliobox es una biblioteca portátil ambulante
 ">
-<meta property="og:url" content="http://localhost:4000/posts/biblio-box">
+<meta property="og:url" content="https://bibliobox.copiona.com/posts/biblio-box">
 <meta property="og:site_name" content="Librenauta">
 <link rel="stylesheet" href="/assets/vendor/normalize-css/normalize.css">
 <link rel="stylesheet" href="/assets/css/main.css">
@@ -226,6 +226,13 @@ para esto necesitaremos hostapd: <code class="highlighter-rouge">sudo apt-get in
  <li>Como no configuramos nada todavía vamos a desactivar temporalmente dnsmasq y hostapd                       <br />
 <code class="highlighter-rouge">sudo systemctl stop dnsmasq
 sudo systemctl stop hostapd</code>
+ <li>Gracias a @perro_tuerto nos dimos cuenta el repositorio de hostapd varia según versión de raspbian, pueden ser tanto, hostapd_2.4-1+deb9u4_armhf.deb, como hostapd_2.7+git20190128+0c1e29f-4_bpo9+2_armhf.deb, este ultimo parece  funcionar, pero si tenes instalado el hostapd  con el primer .deb hay que modificar esta linea en el archivo de configuración:
+   <div class="language-bash highlighter-rouge"><div class="highlight"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2</pre><td class="code"><pre><span class="c">#DAEMON_OPTS="/etc/hostapd/hostapd.conf"</span>
+<span class="nv">DAEMON_CONF</span><span class="o">=</span><span class="s2">"/etc/hostapd/hostapd.conf"</span>
+</pre></table>
+</div>
+   </div>
  <li>
    <p>Luego reiniciamos la raspberrypi con <code class="highlighter-rouge">sudo reboot</code>
  <li>Estamos configurando una red inalámbrica para que actue como servidor, asique necesitaremos una ip estática asignada al puerto inalámbrico para luego  conectarnos a ella y que el dhcp nos asigne una ip como clientas.
@@ -235,8 +242,8 @@ alli podremos lo siguiente al final del archivo:
    <div class="language-bash highlighter-rouge"><div class="highlight"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
 2
 3</pre><td class="code"><pre>interface wlan0
- static <span class="nv">ip_address</span><span class="o">=</span>192.168.100.1/24
- nohook wpa_supplicant
+static <span class="nv">ip_address</span><span class="o">=</span>192.168.100.1/24
+nohook wpa_supplicant
 </pre></table>
 </div>
    </div>
@@ -304,7 +311,7 @@ sudo systemctl start dnsmasq
    </div>
    <p>para dejar el servicio hostapd seteado en el inicio de la RPi.
 </ol>
-<p>15.1 Para no tener que ponerla ip 192.168.100.1 para entrar a la biblioteca vamos a editar el archivo <code class="highlighter-rouge">sudo nano /etc/hosts</code> e ingresar la siguiente linea:
+<p>17  Para no tener que ponerla ip 192.168.100.1 para entrar a la biblioteca vamos a editar el archivo <code class="highlighter-rouge">sudo nano /etc/hosts</code> e ingresar la siguiente linea:
 <div class="language-bash highlighter-rouge"><div class="highlight"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1</pre><td class="code"><pre>192.168.100.1 biblio.box
 </pre></table>
 </div>

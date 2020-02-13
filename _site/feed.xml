@@ -3,10 +3,10 @@
   <channel>
     <title>Librenauta</title>
     <description>Sitio estático lleno de craneadas dinámicas</description>
-    <link>http://localhost:4000/</link>
-    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 14 Nov 2019 11:50:35 -0300</pubDate>
-    <lastBuildDate>Thu, 14 Nov 2019 11:50:35 -0300</lastBuildDate>
+    <link>https://bibliobox.copiona.com/</link>
+    <atom:link href="https://bibliobox.copiona.com/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Thu, 13 Feb 2020 17:23:42 -0300</pubDate>
+    <lastBuildDate>Thu, 13 Feb 2020 17:23:42 -0300</lastBuildDate>
     <generator>Jekyll v3.8.4</generator>
     
       <item>
@@ -20,15 +20,16 @@
   &lt;li&gt;&lt;a href=&quot;http://flisol.lafuenteunlp.com.ar/&quot;&gt;Flisol La plata “2018”, (festival latinoamericano de instalación de software libre)&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://radioslibres.net/crea-tu-biblioteca-digital-portatil/&quot;&gt;Radioslibres.net&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://twitter.com/librenauta/status/981925501534134272&quot;&gt;F.L.I.A la plata “2018”&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;PPT para el miau 2019 &lt;a href=&quot;https://bibliobox.copiona.com/_site-ppt/bibliobox.html&quot;&gt;link&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;PPT para el miau 2019 &lt;a href=&quot;https://bibliobox.copiona.com/bibliobox.html&quot;&gt;link&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;F.L.I.A La Plata “2019”&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://aaronswartzday.partidopirata.com.ar&quot;&gt;AaronSwartzDay2019 en  La Plata 2019 junto a el PIP &amp;amp; Biblioteca Osmiornica &lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://festival.creativecommons.uy/&quot;&gt;Semana de La Cultura Libre 2019 - Uruguay &lt;/a&gt; - &lt;a href=&quot;https://bibliobox.copiona.com/_site-ppt/bibliobox.html&quot;&gt;link&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://festival.creativecommons.uy/&quot;&gt;Semana de La Cultura Libre 2019 - Uruguay &lt;/a&gt; -&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://radioformateca.wordpress.com/2019/10/17/por-un-ciberfeminismo-radiofonico/&quot;&gt;radioformateca.wordpress.com&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;
 </description>
         <pubDate>Thu, 14 Nov 2019 00:00:00 -0300</pubDate>
-        <link>http://localhost:4000/posts/presentacion</link>
-        <guid isPermaLink="true">http://localhost:4000/posts/presentacion</guid>
+        <link>https://bibliobox.copiona.com/posts/presentacion</link>
+        <guid isPermaLink="true">https://bibliobox.copiona.com/posts/presentacion</guid>
         
         <category>cultura libre</category>
         
@@ -66,8 +67,8 @@
 &lt;/ul&gt;
 </description>
         <pubDate>Sun, 11 Aug 2019 00:00:00 -0300</pubDate>
-        <link>http://localhost:4000/posts/difusion</link>
-        <guid isPermaLink="true">http://localhost:4000/posts/difusion</guid>
+        <link>https://bibliobox.copiona.com/posts/difusion</link>
+        <guid isPermaLink="true">https://bibliobox.copiona.com/posts/difusion</guid>
         
         <category>cultura libre</category>
         
@@ -182,6 +183,14 @@ para esto necesitaremos hostapd: &lt;code class=&quot;highlighter-rouge&quot;&gt
   &lt;li&gt;Como no configuramos nada todavía vamos a desactivar temporalmente dnsmasq y hostapd                       &lt;br /&gt;
 &lt;code class=&quot;highlighter-rouge&quot;&gt;sudo systemctl stop dnsmasq
 sudo systemctl stop hostapd&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;Gracias a @perro_tuerto nos dimos cuenta el repositorio de hostapd varia según versión de raspbian, pueden ser tanto, hostapd_2.4-1+deb9u4_armhf.deb, como hostapd_2.7+git20190128+0c1e29f-4_bpo9+2_armhf.deb, este ultimo parece  funcionar, pero si tenes instalado el hostapd  con el primer .deb hay que modificar esta linea en el archivo de configuración:
+    &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;c&quot;&gt;#DAEMON_OPTS=&quot;/etc/hostapd/hostapd.conf&quot;&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;DAEMON_CONF&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;/etc/hostapd/hostapd.conf&quot;&lt;/span&gt;
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
+&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/li&gt;
   &lt;li&gt;
     &lt;p&gt;Luego reiniciamos la raspberrypi con &lt;code class=&quot;highlighter-rouge&quot;&gt;sudo reboot&lt;/code&gt;&lt;/p&gt;
   &lt;/li&gt;
@@ -192,8 +201,8 @@ alli podremos lo siguiente al final del archivo:
     &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
 2
 3&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;interface wlan0
- static &lt;span class=&quot;nv&quot;&gt;ip_address&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;192.168.100.1/24
- nohook wpa_supplicant
+static &lt;span class=&quot;nv&quot;&gt;ip_address&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;192.168.100.1/24
+nohook wpa_supplicant
 &lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
 &lt;/div&gt;
     &lt;/div&gt;
@@ -269,7 +278,7 @@ sudo systemctl start dnsmasq
   &lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;15.1 Para no tener que ponerla ip 192.168.100.1 para entrar a la biblioteca vamos a editar el archivo &lt;code class=&quot;highlighter-rouge&quot;&gt;sudo nano /etc/hosts&lt;/code&gt; e ingresar la siguiente linea:&lt;/p&gt;
+&lt;p&gt;17  Para no tener que ponerla ip 192.168.100.1 para entrar a la biblioteca vamos a editar el archivo &lt;code class=&quot;highlighter-rouge&quot;&gt;sudo nano /etc/hosts&lt;/code&gt; e ingresar la siguiente linea:&lt;/p&gt;
 &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;192.168.100.1 biblio.box
 &lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
 &lt;/div&gt;
@@ -336,8 +345,8 @@ Escribimos -r para que copie los directorios y subdirectorios.
 &lt;/ol&gt;
 </description>
         <pubDate>Sat, 27 Oct 2018 00:00:00 -0300</pubDate>
-        <link>http://localhost:4000/posts/biblio-box</link>
-        <guid isPermaLink="true">http://localhost:4000/posts/biblio-box</guid>
+        <link>https://bibliobox.copiona.com/posts/biblio-box</link>
+        <guid isPermaLink="true">https://bibliobox.copiona.com/posts/biblio-box</guid>
         
         <category>cultura libre</category>
         

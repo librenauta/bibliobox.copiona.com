@@ -97,9 +97,14 @@ para esto necesitaremos hostapd: `sudo apt-get install dnsmasq hostapd`
 7. Como no configuramos nada todavía vamos a desactivar temporalmente dnsmasq y hostapd                         
 `sudo systemctl stop dnsmasq
 sudo systemctl stop hostapd`
-8. Luego reiniciamos la raspberrypi con `sudo reboot`
+8. Gracias a @perro_tuerto nos dimos cuenta el repositorio de hostapd varia según versión de raspbian, pueden ser tanto, hostapd_2.4-1+deb9u4_armhf.deb, como hostapd_2.7+git20190128+0c1e29f-4_bpo9+2_armhf.deb, este ultimo parece  funcionar, pero si tenes instalado el hostapd  con el primer .deb hay que modificar esta linea en el archivo de configuración:
+~~~bash
+#DAEMON_OPTS="/etc/hostapd/hostapd.conf"
+DAEMON_CONF="/etc/hostapd/hostapd.conf"
+~~~
+9. Luego reiniciamos la raspberrypi con `sudo reboot`
 
-9. Estamos configurando una red inalámbrica para que actue como servidor, asique necesitaremos una ip estática asignada al puerto inalámbrico para luego  conectarnos a ella y que el dhcp nos asigne una ip como clientas.
+10. Estamos configurando una red inalámbrica para que actue como servidor, asique necesitaremos una ip estática asignada al puerto inalámbrico para luego  conectarnos a ella y que el dhcp nos asigne una ip como clientas.
 Para configurar la ip estática editamos el siguiente archivo:                           
  `sudo nano /etc/dhcpcd.conf` (nano es el editor de texto que viene por defecto en raspbian)
 alli podremos lo siguiente al final del archivo:
@@ -110,13 +115,13 @@ interface wlan0
 ~~~
 static ip_address es la ip con la cual nos conectaremos via ssh luego                   
  `ssh pi@192.168.100.1`
-10. Luego restarteamos el servicio dhcp `sudo service dhcpcd restart` y tendremos una ip estática en wlan0
-11. El servicio DHCP es llamado por dnsmasq. por defecto el archivo dnsmasq.conf contiene mucha información y es mejor arrancar uno de cero, asque editamos el nombre con `sudo mv /etc/dnsmasq.conf /etc/dnsmasq.conf.orig` y dejamos un backup del archivo de configuración
-12. Luego iniciamos uno nuevo con `sudo nano /etc/dnsmasq.conf` y pegamos las siguentes lineas:                 
+11. Luego restarteamos el servicio dhcp `sudo service dhcpcd restart` y tendremos una ip estática en wlan0
+12. El servicio DHCP es llamado por dnsmasq. por defecto el archivo dnsmasq.conf contiene mucha información y es mejor arrancar uno de cero, asque editamos el nombre con `sudo mv /etc/dnsmasq.conf /etc/dnsmasq.conf.orig` y dejamos un backup del archivo de configuración
+13. Luego iniciamos uno nuevo con `sudo nano /etc/dnsmasq.conf` y pegamos las siguentes lineas:                 
 `interface=wlan0      # Use the require wireless interface - usually wlan0
   dhcp-range=192.168.100.2,192.168.100.24,255.255.255.0,24h`
 
-13. Ahora editaremos el archivo de configuración de Hostapd, el software para crear el acces point en:
+14. Ahora editaremos el archivo de configuración de Hostapd, el software para crear el acces point en:
 `sudo nano /etc/hostapd/hostapd.conf` en este archivo pondremos el nombre de la red inalámbrica y si queremos que tenga contraseña o no.
 
 usar lo siguiente:
@@ -139,9 +144,9 @@ rsn_pairwise=CCMP
 
 * En ssid= poner el nombre de la red inalámbrica
 * En wpa_passphrase= poner la constraseña si es que la queremos.
-14. Ahora necesitamos que el sistema encuentre el archivo asi que en `sudo nano /etc/default/hostapd` buscamos #DAEMON_CONF y escribimos `DAEMON_CONF="/etc/hostapd/hostapd.conf"`
+15. Ahora necesitamos que el sistema encuentre el archivo asi que en `sudo nano /etc/default/hostapd` buscamos #DAEMON_CONF y escribimos `DAEMON_CONF="/etc/hostapd/hostapd.conf"`
 
-15. Iniciamos los servicios dnsmasq & hostapd
+16. Iniciamos los servicios dnsmasq & hostapd
 ~~~bash
 sudo systemctl start hostapd
 sudo systemctl start dnsmasq
@@ -152,14 +157,14 @@ sudo update-rc.d hostapd enable´
 ~~~
 para dejar el servicio hostapd seteado en el inicio de la RPi.
 
-15.1 Para no tener que ponerla ip 192.168.100.1 para entrar a la biblioteca vamos a editar el archivo `sudo nano /etc/hosts` e ingresar la siguiente linea:
+17  Para no tener que ponerla ip 192.168.100.1 para entrar a la biblioteca vamos a editar el archivo `sudo nano /etc/hosts` e ingresar la siguiente linea:
 ~~~bash
 192.168.100.1 biblio.box
 ~~~
 ahora podremos entrar desde el navegador escribiendo biblio.box
-16. Antes de reiniciar vamos a chequear  tener el puerto 22 (SSH) abierto para poder comunicarnos via Wireless. Lo más fácil es utilizar el comando `sudo raspi-config` > 5 Interfacing Options > P2 SSH > Sí.
+18. Antes de reiniciar vamos a chequear  tener el puerto 22 (SSH) abierto para poder comunicarnos via Wireless. Lo más fácil es utilizar el comando `sudo raspi-config` > 5 Interfacing Options > P2 SSH > Sí.
 
-17. Luego parado en la máquina [A] y conectada a la red biblio.box  ubicamos la ruta donde creamos la biblioteca-guerrilla y enviamos esa carpeta al home/pi/ de la raspberrypi con el comando `scp`.
+19. Luego parado en la máquina [A] y conectada a la red biblio.box  ubicamos la ruta donde creamos la biblioteca-guerrilla y enviamos esa carpeta al home/pi/ de la raspberrypi con el comando `scp`.
 Escribimos -r para que copie los directorios y subdirectorios.
 * El comando scp copia y envía por ssh lo que indiquemos, primero hay que indicar el directorio a copiar y luego la conexión via ssh al equipo de destino, seguido de la ubicación de la carpeta destino.
 ~~~bash
@@ -167,13 +172,13 @@ scp -r /tmp/biblioteca-guerrilla/ pi@192.168.100.1:/home/pi/
 ~~~
 ![screenshot de una terminal copiando los archivos](https://bibliobox.copiona.com/assets/img/08.png)
 
-18. Luego en pi@192.168.100.1 dentro de /home/pi utilizamos el comando `mv` para mover los directorios del home a la carpeta host.
+20. Luego en pi@192.168.100.1 dentro de /home/pi utilizamos el comando `mv` para mover los directorios del home a la carpeta host.
 ~~~bash
 sudo mv -r /home/pi/biblioteca-guerrilla /var/www/html
 ~~~
-19. Por último nos conectamos a la red vía movil o con una computadora y tecleamos en el navegador `192.168.100.1` e ingresamos a la biblioteca portátil. si ingresamos desde un celular, es necesario que desactivemos los datos móviles, ya que al ingresar la ip, el navegador intentará hacer una petición fuera de la red wlan0.
+21. Por último nos conectamos a la red vía movil o con una computadora y tecleamos en el navegador `192.168.100.1` e ingresamos a la biblioteca portátil. si ingresamos desde un celular, es necesario que desactivemos los datos móviles, ya que al ingresar la ip, el navegador intentará hacer una petición fuera de la red wlan0.
 
-20. Por último, podemos conectar directamente la celda de carga con la raspberry-pi-3 y montar la red en cualquier sitio, independientemente de si hay corriente electrica o internet.
+22. Por último, podemos conectar directamente la celda de carga con la raspberry-pi-3 y montar la red en cualquier sitio, independientemente de si hay corriente electrica o internet.
 
 # ¡A por islas de bibliotecas portátiles virtuales!
 ![una bibliobox feliz :)](https://bibliobox.copiona.com/assets/img/09.jpg)

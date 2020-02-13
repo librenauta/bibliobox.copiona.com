@@ -3,7 +3,7 @@
   
     
     <url>
-      <loc>http://localhost:4000/posts/presentacion/</loc>
+      <loc>https://bibliobox.copiona.com/posts/presentacion/</loc>
       
         <lastmod>2019-11-14T00:00:00-03:00</lastmod>
       
@@ -18,7 +18,7 @@
   
     
     <url>
-      <loc>http://localhost:4000/posts/difusion/</loc>
+      <loc>https://bibliobox.copiona.com/posts/difusion/</loc>
       
         <lastmod>2019-08-11T00:00:00-03:00</lastmod>
       
@@ -33,7 +33,7 @@
   
     
     <url>
-      <loc>http://localhost:4000/posts/biblio-box/</loc>
+      <loc>https://bibliobox.copiona.com/posts/biblio-box/</loc>
       
         <lastmod>2018-10-27T00:00:00-03:00</lastmod>
       
@@ -51,9 +51,9 @@
   
     
     <url>
-      <loc>http://localhost:4000/about/</loc>
+      <loc>https://bibliobox.copiona.com/about/</loc>
       
-        <lastmod>2019-11-14T11:50:35-03:00</lastmod>
+        <lastmod>2020-02-13T17:23:42-03:00</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -66,9 +66,9 @@
   
     
     <url>
-      <loc>http://localhost:4000/archive/</loc>
+      <loc>https://bibliobox.copiona.com/archive/</loc>
       
-        <lastmod>2019-11-14T11:50:35-03:00</lastmod>
+        <lastmod>2020-02-13T17:23:42-03:00</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -85,9 +85,9 @@
   
     
     <url>
-      <loc>http://localhost:4000/</loc>
+      <loc>https://bibliobox.copiona.com/</loc>
       
-        <lastmod>2019-11-14T11:50:35-03:00</lastmod>
+        <lastmod>2020-02-13T17:23:42-03:00</lastmod>
       
       
         <changefreq>monthly</changefreq>
